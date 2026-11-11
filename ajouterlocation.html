@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouvelle location</title>
+  <link rel="stylesheet" href="mesStyle.css">
+  <script src="controls.js"></script>
+</head>
+<body class="page">
+  <form class="carte" action="ajoutlocation.php" method="post" novalidate onsubmit="return verif3()">
+    <div class="carte__tete">
+      <h2>Nouvelle location</h2>
+      <p>La voiture devient indisponible jusqu'à la fin de la location.</p>
+    </div>
+    <div class="carte__corps">
+      <div class="alerte" id="alerte" role="alert"></div>
+      <div class="grille">
+        <div class="champ champ--plein">
+          <span class="etiquette" id="lbl-immat">Immatriculation de la voiture</span>
+          <div class="plaque" role="group" aria-labelledby="lbl-immat">
+            <input type="text" name="mat" id="mat" maxlength="3" inputmode="numeric" placeholder="123" aria-label="Série (3 chiffres)">
+            <span class="plaque__tn">TN</span>
+            <input type="text" name="mat2" id="mat2" maxlength="4" inputmode="numeric" placeholder="4567" aria-label="Numéro (4 chiffres)">
+          </div>
+        </div>
+        <div class="champ champ--plein">
+          <label for="ncin">CIN du client</label>
+          <input type="text" name="ncin" id="ncin" maxlength="8" inputmode="numeric" placeholder="8 chiffres" autocomplete="off">
+        </div>
+        <div class="champ">
+          <label for="da">Date de début</label>
+          <input type="date" name="da" id="da">
+        </div>
+        <div class="champ">
+          <label for="nbj">Nombre de jours</label>
+          <input type="text" name="nbj" id="nbj" inputmode="numeric" placeholder="3">
+        </div>
+      </div>
+      <div class="actions">
+        <button class="bt" type="submit">Enregistrer la location</button>
+        <button class="bt bt--secondaire" type="reset">Effacer</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

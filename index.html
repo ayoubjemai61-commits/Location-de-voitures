@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location de voitures</title>
+  <link rel="stylesheet" href="mesStyle.css">
+  <script src="controls.js"></script>
+</head>
+<body>
+  <div class="site">
+    <header class="entete">
+      <div class="entete__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+      </div>
+      <div>
+        <h1>Location de voitures</h1>
+        <p>Gestion des clients, du parc et des locations</p>
+      </div>
+    </header>
+
+    <nav class="menu" aria-label="Navigation principale">
+      <p class="menu__titre">Gestion</p>
+      <ul>
+        <li><a href="ajouterclient.html" target="c" class="actif">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          Ajouter un client</a></li>
+        <li><a href="ajoutervoiture.html" target="c">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+          Ajouter une voiture</a></li>
+        <li><a href="ajouterlocation.html" target="c">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          Nouvelle location</a></li>
+        <li><a href="afficherBilan.php" target="c">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+          Bilan des locations</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenu">
+      <iframe src="ajouterclient.html" name="c" title="Contenu"></iframe>
+    </main>
+
+    <footer class="pied">
+      <span><strong>Location de voitures</strong> - Tunisie</span>
+      <span id="date"></span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter une voiture</title>
+  <link rel="stylesheet" href="mesStyle.css">
+  <script src="controls.js"></script>
+</head>
+<body class="page">
+  <form class="carte" action="ajoutvoiture.php" method="post" novalidate onsubmit="return verif2()">
+    <div class="carte__tete">
+      <h2>Ajouter une voiture</h2>
+      <p>La voiture est disponible dès son enregistrement.</p>
+    </div>
+    <div class="carte__corps">
+      <div class="alerte" id="alerte" role="alert"></div>
+      <div class="grille">
+        <div class="champ champ--plein">
+          <span class="etiquette" id="lbl-immat">Immatriculation</span>
+          <div class="plaque" role="group" aria-labelledby="lbl-immat">
+            <input type="text" name="loc" id="loc" maxlength="3" inputmode="numeric" placeholder="123" aria-label="Série (3 chiffres)">
+            <span class="plaque__tn">TN</span>
+            <input type="text" name="tn" id="tn" maxlength="4" inputmode="numeric" placeholder="4567" aria-label="Numéro (4 chiffres)">
+          </div>
+          <small>Série de 3 chiffres (inférieure à 150) puis numéro de 4 chiffres.</small>
+        </div>
+        <div class="champ">
+          <label for="type">Modèle</label>
+          <input type="text" name="type" id="type" maxlength="10" placeholder="Clio">
+        </div>
+        <div class="champ">
+          <label for="an">Année</label>
+          <input type="text" name="an" id="an" maxlength="4" inputmode="numeric" placeholder="2022">
+        </div>
+        <div class="champ champ--plein">
+          <label for="prix">Prix de location par jour (DT)</label>
+          <input type="text" name="prix" id="prix" inputmode="decimal" placeholder="85.000">
+        </div>
+      </div>
+      <div class="actions">
+        <button class="bt" type="submit">Ajouter la voiture</button>
+        <button class="bt bt--secondaire" type="reset">Effacer</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un client</title>
+  <link rel="stylesheet" href="mesStyle.css">
+  <script src="controls.js"></script>
+</head>
+<body class="page">
+  <form class="carte" action="ajoutclient.php" method="post" novalidate onsubmit="return verif1()">
+    <div class="carte__tete">
+      <h2>Ajouter un client</h2>
+      <p>Un e-mail de validation sera envoyé au client.</p>
+    </div>
+    <div class="carte__corps">
+      <div class="alerte" id="alerte" role="alert"></div>
+      <div class="grille">
+        <div class="champ champ--plein">
+          <label for="cin">Numéro de CIN</label>
+          <input type="text" name="cin" id="cin" maxlength="8" inputmode="numeric" placeholder="8 chiffres" autocomplete="off">
+        </div>
+        <div class="champ">
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="nom" maxlength="10">
+        </div>
+        <div class="champ">
+          <label for="pr">Prénom</label>
+          <input type="text" name="pr" id="pr" maxlength="10">
+        </div>
+        <div class="champ champ--plein">
+          <label for="ad">Adresse</label>
+          <input type="text" name="ad" id="ad" maxlength="10">
+        </div>
+        <div class="champ champ--plein">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" name="email" id="email" maxlength="50" placeholder="nom@exemple.com">
+        </div>
+      </div>
+      <div class="actions">
+        <button class="bt" type="submit">Ajouter le client</button>
+        <button class="bt bt--secondaire" type="reset">Effacer</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
